@@ -47,8 +47,8 @@
              n("v-menu",{attrs:{"close-on-content-click":!1,activator:t.selectedElement,"offset-x":""},model:{value:t.selectedOpen,callback:function(e){t.selectedOpen=e},expression:"selectedOpen"}},[n("v-card",{attrs:{color:"grey darken-3",width:350,flat:""}},[n("v-toolbar",{attrs:{color:t.selectedEvent.color,dark:""}},[n("v-btn",{attrs:{icon:""},on:{click:function(e){return t.deleteEvent(t.selectedEvent.id)}}},[n("v-icon",[t._v("mdi-delete")])],1),n("v-toolbar-title",{domProps:{innerHTML:t._s(t.selectedEvent.name)}}),
              n("div",{staticClass:"flex-grow-1"})],1),n("v-card-text",[t.currentlyEditing!==t.selectedEvent.id?n("form",[n("v-list",[n("v-subheader",[t._v("ASISTENCIA")]),t._l(t.students,(function(e,a){return n("v-list-item",{key:a},[n("v-list-item-content",{domProps:{textContent:t._s(e.name+" "+e.surname)}}),n("v-checkbox",{model:{value:t.checkboxes[a],callback:function(e){t.$set(t.checkboxes,a,e)},expression:"checkboxes[i]"}})],1)}))],2)],1):t._e()]),n("v-card-actions",[n("v-btn",{staticClass:"white black--text",attrs:{text:""},on:{click:function(e){t.selectedOpen=!1}}},[t._v(" Cerrar ")]),t.currentlyEditing!==t.selectedEvent.id?n("v-btn",{staticClass:"white black--text",attrs:{text:""},
              on:{click:function(e){return e.preventDefault(),t.editEvent(t.selectedEvent)}}},[t._v(" Editar ")]):t._e()],1)],1)],1)],1)],1)],1)},i=[],l=n(6198),s=(n(5666),n(2222),n(1539),n(4747),n(8309),{data:function()
-            {return{today:new Date(Date.now()),
-                    focus:"2022-03-24",
+            {return{today:new Date(Date.now()-6e4*(new Date).getTimezoneOffset()).toISOString().substr(0,10),
+                    focus:new Date(Date.now()-6e4*(new Date).getTimezoneOffset()).toISOString().substr(0,10),
                     type:"month",typeToLabel:{month:"Mes",week:"Semana",day:"Dia","4day":"4 Dias"},
                     name:null,
                     start:null,
